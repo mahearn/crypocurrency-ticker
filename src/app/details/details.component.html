@@ -1,0 +1,64 @@
+<div *ngFor="let price of details">
+  <h4>Details for {{ price.name }}</h4>
+  <table>
+    <tbody>
+      <tr>
+        <td>Symbol</td>
+        <td>{{ price.symbol }}</td>
+      </tr>
+      <tr>
+        <td>Price (AUD)</td>
+        <td>{{ price.price_aud }}</td>
+      </tr>
+      <tr>
+        <td>Price (USD)</td>
+        <td>{{ price.price_usd }}</td>
+      </tr>
+      <tr>
+        <td>Market capital (AUD)</td>
+        <td>{{ price.market_cap_aud }}</td>
+      </tr>
+      <tr>
+        <td>Market capital (USD)</td>
+        <td>{{ price.market_cap_usd }}</td>
+      </tr>
+      <tr>
+        <td>Available supply</td>
+        <td>{{ price["available_supply"] }}</td>
+      </tr>
+      <tr>
+        <td>Maximum supply</td>
+        <td>{{ price["max_supply"] }}</td>
+      </tr>
+      <tr>
+        <td>Percent change (1 hour)</td>
+        <td>{{ price["percent_change_1h"] }}</td>
+      </tr>
+      <tr>
+        <td>Percent change (24 hours)</td>
+        <td>{{ price["percent_change_24h"] }}</td>
+      </tr>
+      <tr>
+        <td>Percent change (7 days)</td>
+        <td>{{ price["percent_change_7d"] }}</td>
+      </tr>
+      <tr>
+        <td>24 hour volume (AUD)</td>
+        <td>{{ price["24h_volume_aud"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+<!-- <ul class="list-group" *ngFor="let price of prices">
+    <li class="list-group-item">{{ price.symbol }}</li>
+    <li class="list-group-item">{{ price.price_aud }}</li>
+    <li class="list-group-item">{{ price.price_usd }}</li>
+    <li class="list-group-item">{{ price.market_cap_aud }}</li>
+    <li class="list-group-item">{{ price.market_cap_usd }}</li>
+    <li class="list-group-item">{{ price.available_supply }}</li>
+    <li class="list-group-item">{{ price.max_supply }}</li>
+    <li class="list-group-item">{{ price.percent_change_1h }}</li>
+    <li class="list-group-item">{{ price.percent_change_24h }}</li>
+    <li class="list-group-item">{{ price.percent_change_7d }}</li>
+    <li class="list-group-item">{{ price.24h_volume_aud }}</li>
+  </ul> -->
+</div>
