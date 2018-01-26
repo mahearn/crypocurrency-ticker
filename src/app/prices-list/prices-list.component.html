@@ -1,6 +1,7 @@
 <button class="btn btn-success btn-row" (click)="onGetPrices()">Refresh</button>
-<div class="list-group" *ngFor="let price of prices; let i = index">
+<div class="list-group" *ngFor="let price of prices | paginate: { itemsPerPage: 5, currentPage: p }">
   <a class="list-group-item list-group-item-action" (click)="onGetDetails(price.id)" [routerLink]="['/prices', price.id]">
     Name: {{ price.name }} - Price (AUD): {{ price.price_aud }}
   </a>
 </div>
+<pagination-controls (pageChange)="p =$event"></pagination-controls>

@@ -35,7 +35,7 @@ export class ApiService {
       )
       .subscribe(
         (response: any) => {
-          console.log(this.details);
+          // console.log(this.details);
           this.pricesSubject.next(this.details);
         },
         (error) => {
